@@ -1,0 +1,28 @@
+GET http://localhost:3000/movies
+###
+GET http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+###
+GET http://localhost:3000/movies?genre=drama
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title" : "The leon king",
+    "year" : 1994,
+    "director" : "Rob Minkoff",
+    "duration" : 88,
+    "poster": "https://www.imdb.com/title/tt0110357/mediaviewer/rm2488820736",
+    "genre": ["Animation", "Adventure", "Drama"],
+    "rate": 8.5
+}
+
+###
+PATCH http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
+Content-Type: application/json
+
+{
+   "year": 112
+}
+###
+DELETE http://localhost:3000/movies/dcdd0fad-a94c-4810-8acc-5f108d3b18c3
